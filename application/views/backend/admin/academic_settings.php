@@ -14,7 +14,7 @@
     <?php echo form_open(base_url() . 'index.php?admin/academic_settings/do_update' , 
       array('class' => 'form-horizontal form-groups-bordered validate','target'=>'_top'));?>
         <div class="col-md-12">
-            <div class="panel panel-info" >
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <div class="panel-title">
                        <font color="white"><?php echo get_phrase('Academic-Settings');?></font>

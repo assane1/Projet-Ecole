@@ -3,7 +3,7 @@
 <div class="row bg-title">
 <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-          <h4 class="page-title"><?php echo get_phrase('Add-Student');?></h4>
+          <h4 class="page-title"><?php echo get_phrase('Inscription Multiple');?></h4>
         </div>
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
           <ol class="breadcrumb">
@@ -17,7 +17,7 @@
 	<div class="col-md-3"></div>
 	<div class="col-md-3">
 		<div class="form_group">
-			<label class="control-label" style="margin-bottom: 5px;"><?php echo get_phrase('Class');?></label>
+			<label class="control-label" style="margin-bottom: 5px;"><?php echo get_phrase('Choisir une Filiere');?></label>
 			<select name="class_id" id="class_id" class="form-control selectboxit" required="required"
 				onchange="get_sections(this.value)"  data-validate="required"  data-message-required="<?php echo get_phrase('Required');?>">
 				<option value=""><?php echo get_phrase('Select');?></option>
@@ -40,40 +40,37 @@
 	<div class="row" style="margin-bottom:10px;">
 		<div class="form-group">				
 		
-			<input type="text" class="form-control" name="username[]" id="username" required value="" placeholder="Prenom" style="width: 160px; margin-left: 5px;">
+			<input type="text" class="form-control" name="username[]" id="username" required value="" placeholder="Prenom" autocomplete="off" style="width: 160px; margin-left: 5px;">
 		</div>
 		
 		<div class="form-group">
-			<input type="text" name="name[]" id="name" class="form-control" style="width: 160px; margin-left: 5px;"
+			<input type="text" autocomplete="off" name="name[]" id="name" class="form-control" style="width: 160px; margin-left: 5px;"
 				placeholder="Nom" required>
 		</div>
 		
 		<div class="form-group">
-			<input type="text" name="name[]" id="name" class="form-control" style="width: 120px; margin-left: 5px;"
+			<input type="text" autocomplete="off" name="roll[]" id="roll" class="form-control" style="width: 120px; margin-left: 5px;"
 				placeholder="N° de Scolarite" required>
 		</div>
 		<div class="form-group">
 						
-							<input type="text" class="form-control mydatepicker" name="birthday[]" id="birthday" value="" placeholder="date naissance" style="width: 150px; margin-left: 5px;">
+							<input type="text" class="form-control mydatepicker" autocomplete="off" name="birthday[]" id="birthday"  placeholder="date naissance" style="width: 150px; margin-left: 5px;">
 						
-					</div>
-
-		<div class="form-group">
-			<input type="hidden" name="roll[]" id="roll" class="form-control" style="width: 80px; margin-left: 5px;"
-				placeholder="<?php echo get_phrase('Roll');?>" value="1">
 		</div>
+
+		
 		<!--
 		<div class="form-group">
 			<input type="text" name="username[]" id="username" class="form-control" style="width: 160px; margin-left: 5px;"
 				placeholder="<?php //echo get_phrase('login (conexion)');?>" required>
 		</div>
 		 -->
-		<!--
+	
 		<div class="form-group">
-			<input type="password" name="password[]" id="password" class="form-control" style="width: 150px; margin-left: 5px;"
-				placeholder="<?php //echo get_phrase('Mot de passe');?>" required>
+			<input type="password" autocomplete="off" name="password[]" id="password" class="form-control" style="width: 150px; margin-left: 5px;"
+				placeholder="<?php echo get_phrase('Mot de passe');?>" required value="admin">
 		</div>
-	    -->
+	    
 		<!--
 		<div class="form-group">
 			<input type="text" name="phone[]" id="phone" class="form-control" style="width: 140px; margin-left: 5px;"
@@ -81,7 +78,7 @@
 		</div>
 	-->
 	   <div class="form-group">
-			<select name="nationnalite[]" id="nationnalite" class="form-control" style="width: 140px; margin-left: 5px;">
+			<select name="nationnalite[]" autocomplete="off" id="nationnalite" class="form-control" style="width: 140px; margin-left: 5px;">
 				<option value=""><?php echo get_phrase('Nationnalité');?></option>
 				<option value="Americain"><?php echo get_phrase('Americain');?></option>
 				<option value="Senegalais"><?php echo get_phrase('Senegalais');?></option>
@@ -89,7 +86,7 @@
 		</div>
 
 		<div class="form-group">
-			<select name="sex[]" id="sex" class="form-control" style="width: 90px; margin-left: 5px;">
+			<select autocomplete="off" name="sex[]" id="sex" class="form-control" style="width: 90px; margin-left: 5px;">
 				<option value=""><?php echo get_phrase('Sex');?></option>
 				<option value="Masculin"><?php echo get_phrase('M');?></option>
 				<option value="Feminin"><?php echo get_phrase('F');?></option>
@@ -138,7 +135,7 @@
 	$(document).ready(function() {
 		blank_student_entry = $('#student_entry').html();
 
-		for ($i = 0; $i<7;$i++) {
+		for ($i = 1; $i<1;$i++) {
 			$("#student_entry").append(blank_student_entry);
 		}
 		

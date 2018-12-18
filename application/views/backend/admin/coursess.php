@@ -68,13 +68,22 @@
             <br><br>
 				<div class="padded">
 		     
-		     		 <div class="form-group">
-                    <label class="col-sm-3 control-label"><?php echo get_phrase('Subject');?></label>
-                    <div class="col-sm-5">
-                      <input type="text" class="form-control" required="" name="name" placeholder="<?php echo get_phrase('Subject');?>">
-                    </div>
-                  </div>
+                <div class="form-group">
+                              <label class="col-sm-3 control-label"><?php echo get_phrase('Unite D\'enseignement');?></label>
+                                <div class="col-sm-5">
+                                    <select name="class_ue" class="form-control selectboxit" style="width:100%;">
+                                     
+                                      <option value="U1">ENSEIGNEMENT SUPERIEUR PROFESSIONNEL</option>  
+                                      <option value="U2">ENSEIGNEMENT SUPERIEUR PROFESSIONNEL 2eme</option> 
+                                      
+                                      <option value="U4">PARCOURS DE FORMATIONS ACCREDITES PAR LE CAMES</option>
 
+                                        <option value="U4">FILIERE DE FORMATION CONTINUE </option>
+
+                                    </select>
+                                    
+                                </div>
+                            </div>
 					  <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo get_phrase('Class');?></label>
                                 <div class="col-sm-5">
@@ -91,8 +100,17 @@
                     endforeach;
                     ?>
                                     </select>
+
                                 </div>
                             </div>
+                            
+             <div class="form-group">
+                    <label class="col-sm-3 control-label"><?php echo get_phrase('Subject');?></label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" required="" name="name" placeholder="<?php echo get_phrase('Subject');?>">
+                    </div>
+              </div>
+                            
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label"><?php echo get_phrase('Teacher');?></label>

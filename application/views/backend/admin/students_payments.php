@@ -39,6 +39,7 @@
                     		<th style="text-align: center;"><?php echo get_phrase('Title');?></th>
                             <th style="text-align: center;"><?php echo get_phrase('Total');?></th>
                             <th style="text-align: center;"><?php echo get_phrase('Amount');?></th>
+                            <th style="text-align: center;"><?php echo get_phrase('Reliquat');?></th>
                             <th style="text-align: center;"><?php echo get_phrase('Status');?></th>
                     		<th style="text-align: center;"><?php echo get_phrase('Date');?></th>
                     		<th style="text-align: center;"><?php echo get_phrase('Options');?></th>
@@ -57,14 +58,15 @@
 							<td style="text-align: center;"><?php echo $row['title'];?></td>
 							<td style="text-align: center;"><?php echo $this->db->get_where('settings' , array('type'=>'currency'))->row()->description; ?><?php echo $row['amount'];?></td>
                             <td style="text-align: center;"><?php echo $this->db->get_where('settings' , array('type'=>'currency'))->row()->description; ?><?php echo $row['amount_paid'];?></td>
+                            <td style="text-align: center;"><?php echo $this->db->get_where('settings' , array('type'=>'currency'))->row()->description; ?><?php echo $row['due'];?></td>
                             <?php if($row['due'] == 0):?>
                             	<td style="text-align: center;">
-                            		<button class="btn btn-info btn-xs"><?php echo get_phrase('Paid');?></button>
+                            		<button class="btn btn-info btn-xs"><?php echo get_phrase('Complet');?></button>
                             	</td>
                             <?php endif;?>
                             <?php if($row['due'] > 0):?>
                             	<td style="text-align: center;">
-                            		<button class="btn btn-danger btn-xs"><?php echo get_phrase('Unpaid');?></button>
+                            		<button class="btn btn-danger btn-xs"><?php echo get_phrase('Incomplet');?></button>
                             	</td>
                             <?php endif;?>
 							<td style="text-align: center;"><?php echo date('d M,Y', $row['creation_timestamp']);?></td>

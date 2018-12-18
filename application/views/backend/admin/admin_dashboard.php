@@ -18,7 +18,7 @@ $system_name        =   $this->db->get_where('settings' , array('type'=>'system_
 <div class="col-md-12">
 <div class="alert alert-info">
         <span style="color: #fff; font-weight: Verdana; font-size: 23px;">
-<marquee direction="left" scrollamount="10"><?php echo $this->db->get_where('settings' , array('type' =>'ad'))->row()->description;?></marquee></span>
+<marquee direction="left" scrollamount="10"><?php echo $this->db->get_where('settings' , array('type' =>'ad'))->row()->description;?><?php echo $system_title;  ?></marquee></span>
 </div>
 </div>
 </div>

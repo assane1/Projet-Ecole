@@ -82,7 +82,7 @@
 		</div>
 		<div class="col-md-2" style="margin-top: 20px;">
 			<center>
-				<button type="submit" class="btn btn-info"><?php echo get_phrase('View');?></button>
+				<button type="submit" class="btn btn-info"><?php echo get_phrase('Afficher');?></button>
 			</center>
 		</div>
 	</div>
@@ -110,8 +110,12 @@
 						<th style="text-align: center;"><?php echo $this->db->get_where('subject' , array('subject_id' => $subject_id))->row()->la7;?></th>
 						<th><?php echo $this->db->get_where('subject' , array('subject_id' => $subject_id))->row()->la8;?></th>
 						<th style="text-align: center;"><?php echo $this->db->get_where('subject' , array('subject_id' => $subject_id))->row()->la9;?></th>
+					
 						<th style="text-align: center;"><?php echo $this->db->get_where('subject' , array('subject_id' => $subject_id))->row()->final;?></th>
+					
+						
 						<th style="text-align: center;"><?php echo get_phrase('Comments');?></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -128,6 +132,7 @@
 				?>
 					<tr>
 						<td>
+							<?php echo $this->db->get_where('student' , array('student_id' => $row['student_id']))->row()->username;?>
 							<?php echo $this->db->get_where('student' , array('student_id' => $row['student_id']))->row()->name;?>
 						</td>
 						<td>
@@ -166,21 +171,25 @@
 							<input type="text" class="form-control" name="lab_ocho_<?php echo $row['mark_id'];?>"
 								style="width:60px;height:30px" value="<?php echo $row['labocho'];?>">	
 						</td>
+						
 						<td>
 							<input type="text" class="form-control" name="lab_nueve_<?php echo $row['mark_id'];?>"
 								 style="width:60px;height:30px" value="<?php echo $row['labnueve'];?>">
 						</td>
+					
+						 
 						<td>
 							<input type="text" class="form-control" name="comment_<?php echo $row['mark_id'];?>"
 								value="<?php echo $row['comment'];?>">
 						</td>
+					
 					</tr>
 				<?php endforeach;?>
 				</tbody>
 			</table>
 		<center>
 			<button type="submit" class="btn btn-info" id="submit_button">
-				<i class="fa fa-check"></i> <?php echo get_phrase('Upload');?>
+				<i class="fa fa-check"></i> <?php echo get_phrase('Mettre A jour');?>
 			</button>
 		</center>
 		<?php echo form_close();?>

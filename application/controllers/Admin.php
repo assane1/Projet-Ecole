@@ -233,7 +233,7 @@ class Admin extends CI_Controller
             $names     = $this->input->post('name');
             $usernames     = $this->input->post('username');
             $birthdays= $this->input->post('birthday');
-            $nationalites= $this->input->post('nationalite');
+            $nationalites= $this->input->post('nationnalite');
             $rolls     = $this->input->post('roll');
             $emails    = $this->input->post('username');
             $passwords = $this->input->post('password');
@@ -243,7 +243,8 @@ class Admin extends CI_Controller
             $student_entries = sizeof($names);
             for($i = 0; $i < $student_entries; $i++) {
                 $data['name']     =   $names[$i];
-                $data['nationalite']     =   $nationalites[$i];
+                 $data['birthday']     =   $birthdays[$i];
+                $data['nationnalite']     =   $nationalites[$i];
                 $data['username']    =   $emails[$i];
                 $data['password'] =   sha1($passwords[$i]);
                 $data['date']           = strtotime(date("d M,Y"));
@@ -723,6 +724,7 @@ class Admin extends CI_Controller
         if ($param1 == 'create') {
             $data['name']       = $this->input->post('name');
             $data['class_id']   = $this->input->post('class_id');
+            $data['name_ue']   = $this->input->post('class_ue');
             $data['teacher_id'] = $this->input->post('teacher_id');
             $data['year']       = $this->db->get_where('settings' , array('type' => 'running_year'))->row()->description;
             $this->db->insert('subject', $data);

@@ -106,7 +106,7 @@
     <hr />
     <div class="row">
         <div class="col-md-12">
-         <center><p><i class="fa fa-check-circle" style="color: #00a651;"></i> <?php echo get_phrase('Present');?>&nbsp;&nbsp;&nbsp;<i class="fa fa-times-circle" style="color: #ee4749;"></i> <?php echo get_phrase('Absent');?>&nbsp;&nbsp;&nbsp;<i class="fa fa-certificate" style="color: #fec42d;"></i> Llego Tarde</p></center>
+         <center><p><i class="fa fa-check-circle" style="color: #00a651;"></i> <?php echo get_phrase('Present');?>&nbsp;&nbsp;&nbsp;<i class="fa fa-times-circle" style="color: #ee4749;"></i> <?php echo get_phrase('Absent');?>&nbsp;&nbsp;&nbsp;<i class="fa fa-certificate" style="color: #fec42d;"></i> En retard</p></center>
          <hr>
          <div class="table-responsive">
             <table class="table table-bordered" id="my_table">
@@ -153,8 +153,9 @@
                             <?php  } if($status == 2)  { ?>
                                         <i class="fa fa-times-circle" title="<?php echo get_phrase('Absent');?>" data-toggle="tooltip" style="color: #ee4749;"></i>
                             <?php  } if($status == 3)  { ?>
-                                        <i class="fa fa-certificate" title="<?php echo get_phrase('Late');?>" data-toggle="tooltip" style="color: #fec42d;"></i>
+                                        <i class="fa fa-certificate" title="<?php echo get_phrase('En Retard');?>" data-toggle="tooltip" style="color: #fec42d;"></i>
                              <?php  } $status =0;?>
+
                                 </td>
         <?php } ?>
     <?php endforeach; ?>

@@ -20,7 +20,7 @@
                 foreach ($sections as $row2):?>
               <li role="presentation" class=""><a href="#<?php echo $row2['section_id'];?>" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs"><?php echo get_phrase('Section');?> <?php echo $row2['name'];?></span></a></li><?php endforeach;?>
         <?php endif;?>
-            </ul>
+  </ul>
 
 
  <!-- Tab panes -->

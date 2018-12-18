@@ -1,5 +1,5 @@
 <!DOCTYPE html>  
-<html lang="fr">
+<html lang="fr" style="background-color: #ccc;">
 <head><?php
 	$system_title	=	$this->db->get_where('settings' , array('type'=>'system_title'))->row()->description;?>
 	<meta charset="utf-8">
@@ -21,18 +21,26 @@
 	<![endif]-->
 	<script src="assets/js/jquery-1.11.0.min.js"></script>
 </head>
-<body>
+<body style="background-color: #ccc">
 <div class="preloader">
   <div class="cssload-speeding-wheel"></div>
 </div>
 <script type="text/javascript">var baseurl = '<?php echo base_url();?>';</script>
 
 
-<section id="wrapper">
-	<div class="login-box" style="border: 1px solid blue;border-radius: 10px;background-color: #ccc">
+<section id="wrapper" style="background-color: #ccc">
+
+      <div class="white-box" style="background-color: #ccc;text-align: center;" >
+        
+          <a href="index.php?admin/system_settings" class="btn btn-success btn-sm"><i class="ti ti-user"></i> Abonnement Mensuel</a>
+          <button class="btn btn-warning btn-sm"><i class="ti ti-user"></i> Abonnement Annuel</button>
+          <button class="btn btn-danger btn-sm"><i class="ti ti-user"></i> Achat Définitif</button>
+        
+      </div>
+	<div class="login-box" style="border: 1px solid blue;border-radius: 10px;background-color: #ccc;margin-top: -2px">
     <div class="white-box" id="login">
 	<form class="form-horizontal form-material" method="post" role="form" id="form_login">
-		<h3 class="box-title m-b-20"><?php echo get_phrase('Veuillez Vous Connecter SVP'); ?></h3>
+		<h3 class="box-title m-b-20" style="text-align: center"><?php echo get_phrase('Veuillez Vous Connecter SVP'); ?></h3>
 		
 
 		<div class="form-group ">

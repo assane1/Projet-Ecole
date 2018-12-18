@@ -1,6 +1,6 @@
  <div class="row bg-title">
     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-        <h4 class="page-title"><?php echo get_phrase('Sections'); ?></h4> 
+        <h4 class="page-title"><?php echo get_phrase('Niveaux D\'étude'); ?></h4> 
     </div>
     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
         <ol class="breadcrumb">
@@ -42,7 +42,7 @@
 				<table class="table table-bordered">
 					<thead>
 						<tr>
-							<th style="text-align: center;"><?php echo get_phrase('Section');?></th>
+							<th style="text-align: center;"><?php echo get_phrase('Niveau Détude');?></th>
 							<th style="text-align: center;"><?php echo get_phrase('Teacher');?></th>
 							<th style="text-align: center;"><?php echo get_phrase('Edit');?></th>
 							<th style="text-align: center;"><?php echo get_phrase('Delete');?></th>
