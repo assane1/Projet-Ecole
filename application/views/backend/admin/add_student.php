@@ -5,6 +5,7 @@
         <ol class="breadcrumb">
             <li><a href="<?php echo base_url();?>index.php?admin/admin_dashboard"><?php echo get_phrase('Dashboard'); ?></a></li>
             <li class="active"><?php echo get_phrase('Add-Student'); ?></li>
+                        <li class="active"><?php echo get_phrase('nouveau'); ?></li>
         </ol>
     </div>
 </div>
