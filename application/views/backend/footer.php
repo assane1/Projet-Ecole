@@ -1,1 +1,1 @@
-<footer class="footer text-center"> 2019 &copy; Dev-Chrono | Sama-Ecole</footer>
+<footer class="footer text-center"> 2018 &copy; Dev-Chrono | Sama-Ecole</footer>
